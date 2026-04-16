@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow cleartext (HTTP) only for specific NU hosts that require it -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">results.nu.ac.bd</domain>
+        <domain includeSubdomains="true">result.nu.ac.bd</domain>
+        <domain includeSubdomains="true">app11.nu.edu.bd</domain>
+        <domain includeSubdomains="true">app.nu.edu.bd</domain>
+        <domain includeSubdomains="true">nu.ac.bd</domain>
+        <domain includeSubdomains="true">www.nu.ac.bd</domain>
+    </domain-config>
+
+    <!-- Default: disallow cleartext for other hosts -->
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

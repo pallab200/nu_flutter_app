@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash screen theme (light) -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <!-- Prevent brief white flash on cold start -->
+        <item name="android:windowDisablePreview">false</item>
+        <!-- GPU-accelerated rendering from the very first frame -->
+        <item name="android:hardwareAccelerated">true</item>
+    </style>
+
+    <!-- Normal app theme (light) -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+        <item name="android:hardwareAccelerated">true</item>
+        <!-- Edge-to-edge: let Flutter draw behind system bars -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+</resources>
