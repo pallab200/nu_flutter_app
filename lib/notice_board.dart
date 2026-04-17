@@ -1163,7 +1163,7 @@ class _NoticeBannerAdState extends State<_NoticeBannerAd> {
   void initState() {
     super.initState();
     _banner = BannerAd(
-      adUnitId: 'ca-app-pub-3940256099942544/6300978111',
+      adUnitId: 'ca-app-pub-5079343068930294~7587723896',
       size: AdSize.banner,
       request: const AdRequest(),
       listener: BannerAdListener(
