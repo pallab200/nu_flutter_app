@@ -3884,6 +3884,42 @@ class _PrivacyPolicyPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () async {
+                final uri = Uri.parse(
+                  'https://pallab200.github.io/nu_results_portal/privacy-policy.html',
+                );
+                try {
+                  if (await canLaunchUrl(uri)) {
+                    await launchUrl(uri, mode: LaunchMode.externalApplication);
+                  }
+                } catch (_) {}
+              },
+              icon: const Icon(Icons.privacy_tip_outlined),
+              label: const Text('Open hosted privacy policy'),
+              style: OutlinedButton.styleFrom(
+                minimumSize: const Size.fromHeight(48),
+              ),
+            ),
+            const SizedBox(height: 8),
+            OutlinedButton.icon(
+              onPressed: () async {
+                final uri = Uri.parse(
+                  'https://pallab200.github.io/nu_results_portal/delete-data.html',
+                );
+                try {
+                  if (await canLaunchUrl(uri)) {
+                    await launchUrl(uri, mode: LaunchMode.externalApplication);
+                  }
+                } catch (_) {}
+              },
+              icon: const Icon(Icons.delete_outline),
+              label: const Text('Request data deletion'),
+              style: OutlinedButton.styleFrom(
+                minimumSize: const Size.fromHeight(48),
+              ),
+            ),
+            const SizedBox(height: 8),
             FilledButton.icon(
               onPressed: () async {
                 showDialog<void>(
