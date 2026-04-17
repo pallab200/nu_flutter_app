@@ -42,8 +42,8 @@ android {
 
     buildTypes {
         release {
-            // Signing with debug keys for now (replace with release keystore before publishing)
-            signingConfig = signingConfigs.getByName("debug")
+            // Use Play App Signing (Google signs the final APK for Play Store)
+            // Remove explicit signingConfig to allow Play Console to manage signing
 
             // ── R8 full-mode: shrink, obfuscate, optimise ───────────────
             isMinifyEnabled = true
